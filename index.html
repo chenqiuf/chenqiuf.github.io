@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="robots" content="noindex,nofollow" />
+<title>有才遇见有财 · 正在进入</title>
+<script>
+  // 固定入口跳转页：https://salary-hit-graduate-periodically.trycloudflare.com 由 npm run entry:sync 自动替换为当前隧道地址。
+  // 任意子路径（/auth、/offers/xxx）都会被 GitHub Pages 交给 404.html 处理，
+  // 因此这里保留 pathname / search / hash，跳到隧道后能直达原页面。
+  (function () {
+    var TUNNEL = "https://salary-hit-graduate-periodically.trycloudflare.com";
+    if (TUNNEL.indexOf("http") !== 0) {
+      document.documentElement.innerHTML =
+        '<body style="font-family:system-ui;padding:24px;color:#7a3b2e">固定入口尚未绑定地址，请运行 npm run entry:sync</body>';
+      return;
+    }
+    var base = TUNNEL.replace(/\/+$/, "");
+    var path = location.pathname === "/" ? "/" : location.pathname;
+    location.replace(base + path + location.search + location.hash);
+  })();
+</script>
+<style>
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: grid;
+    place-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #faf8f5;
+    color: #4b3a2f;
+  }
+  .tip { text-align: center; line-height: 1.8; }
+  .brand { font-size: 18px; font-weight: 590; letter-spacing: -0.01em; }
+  .sub { font-size: 13px; color: #8a7a6d; margin-top: 6px; }
+</style>
+</head>
+<body>
+  <div class="tip">
+    <div class="brand">有才遇见有财</div>
+    <div class="sub">正在进入…</div>
+  </div>
+  <noscript>
+    <div class="tip"><div class="sub">请开启 JavaScript，或直接访问页面底部提供的地址。</div></div>
+  </noscript>
+</body>
+</html>
